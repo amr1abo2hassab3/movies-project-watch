@@ -1,0 +1,54 @@
+.card-box {
+    color: white;
+    height: 500px;
+    border-radius: 25px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-box .img-card {
+    width: 100%;
+    height: 100%;
+}
+
+.card-box .img-card img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.overlayCard {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* أسود بوضوح 70% */
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    top: 0;
+    right: 0;
+}
+
+.card-box .img-card img:hover+.overlayCard {
+    transform: scale(1);
+}
+
+.overlayCard:hover {
+    transform: scale(1);
+}
+
+.overlayCard h2 {
+    margin: 15px 0;
+}
+
+.overlayCard p {
+    margin: 15px 0;
+    font-size: 22px;
+}
